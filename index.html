@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <title>Form</title>
+  </head>
+  <body>
+    <div class="container t-center border mt-4">
+      <h3>Form</h3>
+
+      <form action="" method="POST" id="fullForm">
+        <div>
+          <div class="row g-3">
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="First name"
+                aria-label="First name"
+              />
+            </div>
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Last name"
+                aria-label="Last name"
+              />
+            </div>
+          </div>
+          <form></form>
+          <div class="d-flex">
+            <div class="border mt-3 bg-info">
+              <form method="POST" id="collageName">
+                <label class="form-label">Collage Name :</label>
+                <input class="form-control" type="text" /><br />
+                <label class="form-label">College address:</label
+                ><input class="form-control" type="text" /><br />
+                <input class="btn btn-light my-3" type="submit" />
+              </form>
+            </div>
+            <form></form>
+            <div class="border mt-3 bg-info">
+              <form method="POST" onsubmit="courseName()">
+                <label class="form-label">Course Name :</label>
+                <input
+                  class="form-control"
+                  list="datalistOptions"
+                  id="exampleDataList"
+                  placeholder="Type to search..."
+                />
+                <datalist id="datalistOptions">
+                  <option value="B.Sc"></option>
+                  <option value="M.Sc"></option>
+                  <option value="B.E"></option>
+                  <option value="M.E"></option>
+                  <option value="B.tech"></option></datalist
+                ><br />
+                <label class="form-label">Year of completion</label
+                ><input
+                  class="form-control"
+                  type="number"
+                  max="2020"
+                  min="1990"
+                /><br />
+                <input class="btn btn-light my-3" type="submit" />
+              </form>
+            </div>
+          </div>
+          <input
+            class="btn btn-dark my-3 t-center"
+            type="submit"
+            value="submit"
+          />
+
+          <!-- </button> -->
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+<script>
+  function fullForm() {
+    alert("the form has submited");
+  }
+  document.getElementById("fullForm").onsubmit = function () {
+    fullForm();
+  };
+  //   console.log(document.getElementById("fullForm"));
+  document.getElementById("collageName").onsubmit = function () {
+    collageName();
+  };
+  function courseName() {
+    alert("course Name has saved");
+  }
+  function collageName() {
+    alert("Collage name has saved");
+  }
+</script>
